@@ -76,6 +76,8 @@ const NAV_ITEMS = {
   ],
   staff: [
     { id: "view-equipment", label: "Equipment" },
+    { id: "view-submit-request", label: "Submit Request" },
+    { id: "view-my-requests", label: "My Requests" },
     { id: "view-all-requests", label: "Requests" },
   ],
   requester: [
