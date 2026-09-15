@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laboratory Asset Management - Login</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-box">
+    <h1>Laboratory Asset and Service Management</h1>
+    <p class="subtitle">Role-Based Asset Transaction and Approval Management</p>
+
+    <div id="error-box" class="error" hidden></div>
+
+    <form id="login-form" class="form">
+      <h2>Log in</h2>
+      <label for="login-email">Email</label>
+      <input type="email" id="login-email" required />
+
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" required />
+
+      <button type="submit">Log in</button>
+      <p class="switch">No account? <a href="#" id="show-signup">Sign up</a></p>
+    </form>
+
+    <form id="signup-form" class="form" hidden>
+      <h2>Sign up</h2>
+      <label for="signup-name">Full name</label>
+      <input type="text" id="signup-name" required />
+
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" required />
+
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" minlength="6" required />
+
+      <button type="submit">Create account</button>
+      <p class="switch">Have an account? <a href="#" id="show-login">Log in</a></p>
+    </form>
+  </main>
+
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

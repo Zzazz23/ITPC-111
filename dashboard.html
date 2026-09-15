@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard - Laboratory Asset Management</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h1 class="brand">Lab Asset System</h1>
+      <p class="user-info" id="user-info">Loading...</p>
+      <nav id="nav-menu" class="nav-menu"></nav>
+      <button id="logout-btn" class="logout-btn">Log out</button>
+    </aside>
+
+    <main class="content">
+      <div id="message-box" class="error" hidden></div>
+
+      <!-- Equipment -->
+      <section id="view-equipment" class="view">
+        <h2>Equipment</h2>
+        <div id="add-equipment-box" class="inline-form" hidden>
+          <input type="text" id="new-equipment-name" placeholder="Equipment name" />
+          <input type="text" id="new-equipment-desc" placeholder="Description" />
+          <button id="add-equipment-btn">Add equipment</button>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr><th>ID</th><th>Name</th><th>Description</th><th>Status</th><th>Action</th></tr>
+          </thead>
+          <tbody id="equipment-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Submit request (Requester) -->
+      <section id="view-submit-request" class="view">
+        <h2>Submit a Borrowing Request</h2>
+        <div class="inline-form">
+          <select id="request-equipment-select"></select>
+          <button id="submit-request-btn">Submit request</button>
+        </div>
+      </section>
+
+      <!-- My requests (Requester) -->
+      <section id="view-my-requests" class="view">
+        <h2>My Requests</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>ID</th><th>Equipment</th><th>Status</th><th>Submitted</th></tr>
+          </thead>
+          <tbody id="my-requests-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- All requests (Staff / Admin) -->
+      <section id="view-all-requests" class="view">
+        <h2>Borrowing Requests</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>ID</th><th>Requester</th><th>Equipment</th><th>Status</th><th>Actions</th></tr>
+          </thead>
+          <tbody id="all-requests-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Users (Admin) -->
+      <section id="view-users" class="view">
+        <h2>Manage Users</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>Name</th><th>Role</th><th>Change role</th></tr>
+          </thead>
+          <tbody id="users-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Audit log (Admin) -->
+      <section id="view-audit" class="view">
+        <h2>Audit Log</h2>
+        <table class="data-table">
+          <thead>
+            <tr><th>Date</th><th>User</th><th>Action</th><th>Module</th><th>Record</th><th>Description</th></tr>
+          </thead>
+          <tbody id="audit-table-body"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
